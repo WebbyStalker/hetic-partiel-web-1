@@ -109,6 +109,22 @@
   margin-bottom: 0;
 }
 
+.bg01 {
+  background-image: url('../images/demo/backgrounds/01.png');
+}
+
+.bg02 {
+  background-image: url('../images/demo/backgrounds/02.png');
+}
+
+.bg03 {
+  background-image: url('../images/demo/backgrounds/03.png');
+}
+
+.bg04 {
+  background-image: url('../images/demo/backgrounds/04.png');
+}
+
 /* Used when elements stack in smaller viewports */
 
 .services>li>ul li i {
@@ -799,6 +815,11 @@ body {
 }
 
 a {
+  color: #7A7A7A;
+  transition: ease 0.3s color;
+}
+
+a:hover {
   color: #CF9C67;
 }
 
@@ -882,7 +903,6 @@ input:focus, textarea:focus, *:required:focus {
 }
 
 .row5, .row5 a {
-  color: #7A7A7A;
   background-color: #FFFFFF;
 }
 
@@ -1085,7 +1105,7 @@ table a, #comments a {
 
 /* Max Wrapper Width - Laptop, Desktop etc. --------------------------------------------------------------------------------------------------------------- */
 
-@media screen and (min-width: 978px) {
+@media screen and (min-width:978px) {
   .hoc {
     max-width: 978px;
   }
@@ -1093,7 +1113,7 @@ table a, #comments a {
 
 /* Mobile Devices --------------------------------------------------------------------------------------------------------------- */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width:900px) {
   .hoc {
     max-width: 90%;
   }
@@ -1127,7 +1147,7 @@ table a, #comments a {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width:750px) {
   .imgl, .imgr {
     display: inline-block;
     float: none;
@@ -1174,7 +1194,7 @@ table a, #comments a {
 
 /* Other --------------------------------------------------------------------------------------------------------------- */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width:650px) {
   .scrollable {
     display: block;
     width: 100%;
@@ -1189,7 +1209,6 @@ table a, #comments a {
     white-space: nowrap;
   }
   .inline li {
-    display: block;
     margin-bottom: 10px;
   }
   .pushright li {
