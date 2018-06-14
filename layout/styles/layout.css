@@ -47,7 +47,12 @@
 }
 
 #header #logo {
-    margin: 30px 0 0 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #header #logo h1 {
