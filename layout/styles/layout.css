@@ -13,6 +13,11 @@
   margin: 0;
 }
 
+#topbar #menu_mobile {
+  font-size: 24px;
+  display: none;
+}
+
 #topbar ul {
   float: right;
 }
@@ -1114,37 +1119,81 @@ table a, #comments a {
 /* Mobile Devices --------------------------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width:900px) {
+  .fl_left, .fl_right {
+    display: block;
+    float: none;
+  }
   .hoc {
     max-width: 90%;
   }
   #topbar {}
-  #header {
-    padding: 30px 0;
-  }
-  #header #logo {
-    margin-top: 3px;
-  }
-  #mainav {}
-  #mainav ul {
-    display: none;
-  }
-  #mainav form {
-    display: block;
-  }
-  #breadcrumb {}
-  .container {}
-  #comments input[type="reset"] {
-    margin-top: 10px;
-  }
-  .pagination li {
+  #topbar #menu_mobile {
     display: inline-block;
-    margin: 0 5px 5px 0;
   }
-  #footer {}
-  #copyright {}
-  #copyright p:first-of-type {
-    margin-bottom: 10px;
-  }
+}
+
+#header {
+  padding: 30px 0;
+  text-align: center;
+}
+
+#header #logo {
+  margin-top: 3px;
+}
+
+#mainav {
+  display: none;
+}
+
+#mainav li {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#mainav .drop::after, #mainav li li .drop::after {
+  left: inherit;
+  margin-left: 8px;
+}
+
+#mainav ul ul {
+  z-index: inherit;
+  position: relative;
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+#mainav ul ul ul {
+  left: 0;
+}
+
+#mainav form {
+  display: block;
+}
+
+#breadcrumb {}
+
+.container {}
+
+#comments input[type="reset"] {
+  margin-top: 10px;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+
+#footer {}
+
+#copyright {}
+
+#copyright p:first-of-type {
+  margin-bottom: 10px;
+}
+
 }
 
 @media screen and (max-width:750px) {
@@ -1152,10 +1201,6 @@ table a, #comments a {
     display: inline-block;
     float: none;
     margin: 0 0 10px 0;
-  }
-  .fl_left, .fl_right {
-    display: block;
-    float: none;
   }
   .group .group>*:last-child, .clear .clear>*:last-child, .clear .group>*:last-child, .group .clear>*:last-child {
     margin-bottom: 0;
@@ -1167,9 +1212,6 @@ table a, #comments a {
     width: auto;
     margin: 0 0 30px 0;
     padding: 0;
-  }
-  #header {
-    text-align: center;
   }
   #header #logo {
     margin: 0 0 15px 0;
